@@ -1,0 +1,51 @@
+<aiml version="2.0">
+    <category>
+        <pattern>ROCK</pattern>
+        <template>
+            <think><set name="userMove">rock</set></think>
+            <random>
+                <li>Paper! I win! Let's play again. Type Rock, Paper, or Scissors.</li>
+                <li>Scissors! You win! Let's play again. Type Rock, Paper, or Scissors.</li>
+                <li>Rock! It's a tie! Let's play again. Type Rock, Paper, or Scissors.</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>PAPER</pattern>
+        <template>
+            <think><set name="userMove">paper</set></think>
+            <random>
+                <li>Scissors! I win! Let's play again. Type Rock, Paper, or Scissors.</li>
+                <li>Rock! You win! Let's play again. Type Rock, Paper, or Scissors.</li>
+                <li>Paper! It's a tie! Let's play again. Type Rock, Paper, or Scissors.</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SCISSORS</pattern>
+        <template>
+            <think><set name="userMove">scissors</set></think>
+            <random>
+                <li>Rock! I win! Let's play again. Type Rock, Paper, or Scissors.</li>
+                <li>Paper! You win! Let's play again. Type Rock, Paper, or Scissors.</li>
+                <li>Scissors! It's a tie! Let's play again. Type Rock, Paper, or Scissors.</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Hi there! Let's play Rock, Paper, Scissors. Type Rock, Paper, or Scissors to begin.
+        </template>
+    </category>
+
+    <category>
+        <pattern>GOODBYE</pattern>
+        <template>
+            Goodbye! Thanks for playing Rock, Paper, Scissors.
+        </template>
+    </category>
+</aiml>

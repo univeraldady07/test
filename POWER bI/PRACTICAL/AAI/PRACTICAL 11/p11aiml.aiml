@@ -1,0 +1,21 @@
+<aiml version="2.0"> 
+    <!-- Basic greeting --> 
+    <category> 
+        <pattern>HELLO</pattern> 
+        <template>Hi there! I'm your restaurant guide. How can I help you 
+today?</template> 
+    </category> 
+ 
+    <!-- Ask for help --> 
+    <category> 
+        <pattern>HELP</pattern> 
+        <template>If you need a restaurant suggestion, just tell me what type of cuisine 
+you're craving!</template> 
+    </category> 
+ 
+    <!-- Goodbye --> 
+    <category> 
+        <pattern>GOODBYE</pattern> 
+        <template>Goodbye! Have a great meal!</template> 
+    </category> 
+</aiml> 

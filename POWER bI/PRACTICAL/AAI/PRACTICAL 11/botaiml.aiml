@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <!-- Greeting and Introduction -->
+    <category>
+        <pattern>RECOMMEND A RESTAURANT</pattern>
+        <template>
+            I’m excited to help! What type of cuisine are you in the mood for today? 
+            (Italian, Chinese, Mexican... or something else exciting?)
+        </template>
+    </category>
+
+    <!-- Capturing Cuisine Preference -->
+    <category>
+        <pattern>I LIKE * FOOD</pattern>
+        <template>
+            <think><set name="cuisine"><star/></set></think>
+            Yummy! <get name="cuisine"/> food is always a great choice! Now, do you want a relaxed vibe or a fancy experience for your meal?
+        </template>
+    </category>
+
+    <!-- More Flexible Cuisine Recognition -->
+    <category>
+        <pattern>* FOOD</pattern>
+        <template>
+            <think><set name="cuisine"><star/></set></think>
+            Got it! You're in the mood for <get name="cuisine"/> food. Now, do you want a relaxed vibe or a fancy dining experience?
+        </template>
+    </category>
+
+    <!-- Recognizing Simple Cuisine Names -->
+    <category>
+        <pattern>ITALIAN</pattern>
+        <template>
+            <think><set name="cuisine">Italian</set></think>
+            Got it! You're in the mood for Italian food. Now, do you want a relaxed vibe or a fancy dining experience?
+        </template>
+    </category>
+
+    <category>
+        <pattern>CHINESE</pattern>
+        <template>
+            <think><set name="cuisine">Chinese</set></think>
+            Got it! You're in the mood for Chinese food. Now, do you want a relaxed vibe or a fancy dining experience?
+        </template>
+    </category>
+
+    <category>
+        <pattern>MEXICAN</pattern>
+        <template>
+            <think><set name="cuisine">Mexican</set></think>
+            Got it! You're in the mood for Mexican food. Now, do you want a relaxed vibe or a fancy dining experience?
+        </template>
+    </category>
+
+    <category>
+        <pattern>INDIAN</pattern>
+        <template>
+            <think><set name="cuisine">Indian</set></think>
+            Got it! You're in the mood for Indian food. Now, do you want a relaxed vibe or a fancy dining experience?
+        </template>
+    </category>
+
+    <!-- Handling Dining Preferences (casual/fine dining) -->
+    <category>
+        <pattern>* DINING</pattern>
+        <template>
+            Based on your love for <get name="cuisine"/> food and your desire for <star/> dining, here’s where I think you should go: 
+            <condition name="cuisine">
+                <li value="Italian">For a cozy yet elegant experience, Luigi’s Trattoria will make you feel like you're in Italy itself! 🍝</li>
+                <li value="Chinese">Golden Dragon is perfect if you’re craving an exotic twist with every bite! 🍜</li>
+                <li value="Mexican">El Rancho offers mouth-watering tacos and margaritas – fiesta time! 🌮🍹</li>
+                <li value="Indian">The Spice House is ready to ignite your taste buds with a burst of flavors! 🌶️🍛</li>
+                <li value="Japanese">Sakura Sushi is a hidden gem for sushi lovers – fresh and oh-so-delicious! 🍣</li>
+                <li value="American">Burger Haven is where all burger dreams come true! 🍔</li>
+                <li value="French">Le Petit Bistro offers a little slice of Paris for your palate! 🥖🍷</li>
+                <li value="Thai">Thai Orchid has the perfect mix of spicy, sweet, and savory – a Thai delight! 🍜</li>
+                <li value="Mediterranean">Olive Grove will take you on a journey to the Mediterranean coast with every bite! 🍽️🌿</li>
+                <li value="Korean">Seoul BBQ is an interactive dining experience you’ll never forget – BBQ your way! 🍖</li>
+                <li value="Greek">Santorini Grill offers a perfect blend of Greek flavors with stunning views! 🥙</li>
+                <li value="Vegan">Green Earth Café is your go-to for fresh, plant-based goodness. 🌱</li>
+                <li value="default">Hmm, I’m not familiar with that cuisine. Could you try again with a more common type of food? 😅</li>
+            </condition>
+            Let me know if any of these sound mouth-watering! Or if you'd like to try something else, I'm here to help. 😋
+        </template>
+    </category>
+
+</aiml>
