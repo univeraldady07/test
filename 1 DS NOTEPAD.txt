@@ -1,0 +1,53 @@
+1A 
+
+CREATE TABLE ds.emp(empID int,deptID int,first_name varchar,last_name varchar,PRIMARY KEY(empID,deptID));
+
+
+INSERT INTO ds.emp(empID,deptID,first_name,last_name)VALUES(101,11,'Shubham','Navale');
+
+
+INSERT INTO ds.emp(empID,deptID,first_name,last_name)VALUES(102,12,'Krunal','Kudave');
+
+
+INSERT INTO ds.emp(empID,deptID,first_name,last_name)VALUES(103,13,'Abhishek','Walkar');
+
+
+INSERT INTO ds.emp(empID,deptID,first_name,last_name)VALUES(104,14,'Anurag','Nikam');
+
+
+INSERT INTO ds.emp(empID,deptID,first_name,last_name)VALUES(104,15,'Sahil','Mulik');
+
+
+INSERT INTO ds.emp(empID,deptID,first_name,last_name)VALUES(105,16,'Pratik','Thorat');
+
+
+select * from ds.emp;
+
+
+
+
+DELETE FROM ds.emp where empID=105;
+
+Select * From ds.emp;
+
+
+1B 
+
+CREATE TABLE ds.stud(studID int, deptID int, first_name varchar,last_name varchar, year_of_joining int, PRIMARY KEY(studID, deptID));
+
+INSERT INTO ds.stud(studID, deptID, first_name, last_name, year_of_joining)VALUES (101,1,'Abhishek','Walkar', 2025);
+
+INSERT INTO ds.stud(studID, deptID, first_name, last_name, year_of_joining)VALUES (101,2,'Shubham','Navale', 2025);
+
+INSERT INTO ds.stud(studID, deptID, first_name, last_name, year_of_joining)VALUES (103,3,'AK','koli', 2025);
+
+INSERT INTO ds.stud(studID, deptID, first_name, last_name, year_of_joining)VALUES (104,4,'Pratik','Kadam', 2025);
+
+INSERT INTO ds.stud(studID, deptID, first_name, last_name, year_of_joining)VALUES (105,5,'sumit','patil', 2025);
+
+SELECT * FROM ds.stud;
+
+
+
+DELETE FROM ds.stud where studID=105;
+select * from ds.stud;
